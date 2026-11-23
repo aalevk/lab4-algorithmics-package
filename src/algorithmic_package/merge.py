@@ -1,4 +1,4 @@
-from algorithmic_package.exceptions import NotAnInteger, invalidDataTypeError
+from algorithmic_package.exceptions import InvalidDataTypeError, NotAnInteger
 
 
 def merge(left, right):
@@ -19,7 +19,7 @@ def merge(left, right):
 
 def merge_sort(spisok):
     if not isinstance(spisok, list):
-        raise invalidDataTypeError("Ожидается список")
+        raise InvalidDataTypeError("Ожидается список")
     if not all(type(x) is int for x in spisok):
         raise NotAnInteger("Не все элементы списка - целые числа")
     if len(spisok) < 2:

@@ -1,7 +1,7 @@
 import pytest
 
 from algorithmic_package.bubble import bubble_sort
-from algorithmic_package.exceptions import NotAnInteger, invalidDataTypeError
+from algorithmic_package.exceptions import InvalidDataTypeError, NotAnInteger
 from algorithmic_package.generators import generate_random
 from algorithmic_package.merge import merge_sort
 
@@ -58,7 +58,7 @@ def test_original_list():
 
 def test_wrong_input():
     for sort in (bubble_sort, merge_sort):
-        with pytest.raises(invalidDataTypeError):
+        with pytest.raises(InvalidDataTypeError):
             sort((2, 1))
 
 

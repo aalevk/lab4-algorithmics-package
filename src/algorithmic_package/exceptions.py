@@ -14,7 +14,7 @@ class NotAnInteger(AlgorithmError):
     pass
 
 
-class invalidDataTypeError(AlgorithmError):
+class InvalidDataTypeError(AlgorithmError):
     pass
 
 

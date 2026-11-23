@@ -1,9 +1,9 @@
-from algorithmic_package.exceptions import NotAnInteger, invalidDataTypeError
+from algorithmic_package.exceptions import InvalidDataTypeError, NotAnInteger
 
 
 def bubble_sort(spisok):
     if not isinstance(spisok, list):
-        raise invalidDataTypeError("Ожидается список")
+        raise InvalidDataTypeError("Ожидается список")
     result = spisok.copy()
     if not all(type(x) is int for x in result):
         raise NotAnInteger("Не все элементы списка - целые числа")
